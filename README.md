@@ -58,12 +58,6 @@ npm run build
 | `MAILER_EMAIL`      | string  | Sender email address     | `noc@company.com`     |
 | `MAILER_SECRET_KEY` | string  | Email authentication key | `xxxx xxxx xxxx xxxx` |
 
-### PROD Variable
-
-Controls the application behavior:
-- `PROD=false` - Development mode (verbose logging, detailed errors)
-- `PROD=true` - Production mode (optimized performance, minimal logging)
-
 ---
 
 ## 🎯 Available Scripts
