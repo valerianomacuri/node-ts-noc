@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "tsnd --respawn --clear src/app.ts",
     "build": "rimraf ./dist && tsc",
-    "start": "npm run build && node dist/app.js"
+    "start": "npm run build && node dist/app.js",
+    "docker:psql": "docker exec -it 05-noc-postgres-db-1 psql -U postgres -d NOC",
+    "docker:mongosh": "docker exec -it 05-noc-mongo-db-1 mongosh \"mongodb://admin:pass@localhost:27017/?authMechanism=DEFAULT\""
   },
   "keywords": [],
   "author": "",
@@ -14,14 +16,17 @@
   "devDependencies": {
     "@types/node": "^24.6.2",
     "@types/nodemailer": "^7.0.2",
+    "prisma": "^6.16.3",
     "rimraf": "^6.0.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@prisma/client": "^6.16.3",
     "cron": "^4.3.3",
     "dotenv": "^17.2.3",
     "env-var": "^7.5.0",
+    "mongoose": "^8.19.0",
     "nodemailer": "^7.0.6"
   }
 }
